@@ -53,16 +53,6 @@ module.exports = function (app) {
     }
   });
 
-
-  /*
-    Gets all users
-    GET "localhost:4200/api/users/all"
-  */
-  usersRouter.get('/all', function (req, res) {
-    // get all users
-    res.send(usersJson);
-  });
-
   app.use('/api/users', require('body-parser').json({
     type: 'application/*+json'
   }), usersRouter);
