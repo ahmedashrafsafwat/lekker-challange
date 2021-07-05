@@ -1,5 +1,10 @@
 {{page-title 'User'}}
 <div class="container">
+  <h3 class="filter-text">Filters:</h3>
+  <input type="checkbox" checked={{this.model.allUsers}} id="allUsers"
+        onchange={{action "showAll"  value="target.checked"}}> 
+  <label for="allUsers" class="filter-text">All Users</label> 
+  
   <div class="columns is-centered">
 
     {{#each @model as |user|}}

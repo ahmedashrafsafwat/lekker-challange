@@ -2,7 +2,7 @@
   <div class="container has-text-centered">
     <div class="column is-3 is-offset-4">
 
-      <LinkTo @route="users">
+      <LinkTo @route="users"  @query={{hash getAll="false"}}>
         <button class="button mb-2" type="button">
           Back to users
         </button>
@@ -24,7 +24,7 @@
         </p>
 
         {{!-- Place the component to archive/unarchive users here --}}
-
+        <Archive @model={{@model}} />
       </div>
     </div>
   </div>

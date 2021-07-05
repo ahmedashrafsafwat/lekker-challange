@@ -1,0 +1,19 @@
+<div class='archive-container'>
+
+  {{#if @model.archived}}
+    <h3>This user is Archived, for unarchiving please click here</h3>
+    <button
+      onclick={{action 'changeArchiveStatus' @model}}
+      class='archive-btn'
+      id='archiveBtn'
+    >Unarchive</button>
+  {{else}}
+    <h3>This user is not archived for archiving please click here</h3>
+    <button
+      onclick={{action 'changeArchiveStatus' @model}}
+      class='archive-btn'
+      id='archiveBtn'
+    >Archive</button>
+  {{/if}}
+
+</div>
